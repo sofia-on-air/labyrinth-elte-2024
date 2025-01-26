@@ -8,3 +8,5 @@ Take care that the player and the dragon cannot start off on walls.
 In this task, I created a simple puzzle game with a grid layout and a player that moves around the board. To begin, I created a GameLevel class that initializes the game board, sets up the player, the dragon, and the destination, and handles movement and game logic. The player moves with the arrow keys, and the dragon moves randomly on the grid. I used the Direction enumerator to control movement directions and the Position class to track coordinates. The MainWindowclass provides the user interface, allowing for game controls like starting new levels, adjusting zoom, and viewing high scores. Additionally, I implemented a timer to track the player's progress and display the number of steps taken.
 
 # UML
+![UML](images/uml1.png)
+![UML](images/uml2.png)
