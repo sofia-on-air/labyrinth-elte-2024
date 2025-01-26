@@ -96,4 +96,8 @@ Handler: Loads the selected level and refreshes the game board.
 
 # Game
 When I runs the program it asks for a player’s name
-![UML](images/.png)
+![inputOfName](images/name_inp.png)
+First level starts
+![firstLevel](images/game_begin.png)
+In case of winning dialog of congrads shows up
+
