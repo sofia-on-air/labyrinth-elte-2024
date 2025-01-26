@@ -54,45 +54,59 @@ for adjusting the zoom scale of the game board within the specified range and
 increment.
 - displayHighScores(): Fetches and displays the high scores from the database in a dialog
 window using a table.
-# Events and Handlers:
-1. Key Press Event (keyPressed)
-Event: User presses arrow keys or ESC.
+# Events and Handlers
 
-Handler: Moves player or reloads the game, and checks if the player has won or lost. 
-2. Menu Actions
-2.1 Restart Game (menuGameRestart) Event: User clicks "Restart Game".
-Handler: Calls restartGame(), resets game and timer. 
-2.2 Exit Game (menuGameExit)
-Event: User clicks "Exit".
-Handler: Calls System.exit(0) to exit the app. 
-2.3 High Scores (menuHighScore)
-Event: User clicks "High Scores".
-Handler: Displays high scores in a dialog (displayHighScores()). 
-2.4 Level Selection
-Event: User selects a difficulty/level.
-Handler: Calls game.loadGame() to load the selected level. 
-2.5 Zoom Scale Selection
-Event: User selects zoom level.
-Handler: Updates board scale (board.setScale()). 
-3. Timer Actions
-3.1 Start Timer (startTimer)
-Event: Game starts or restarts.
-Handler: Starts a timer to track elapsed time.
-3.2 Stop Timer (stopTimer) Event: Game ends.
-Handler: Stops the timer and resets elapsed time. 
-3.3 Timer Action Listener
+## 1. Key Press Event
+- **Event**: User presses arrow keys or ESC.
+- **Handler**: Moves player or reloads the game, and checks if the player has won or lost.
 
-Event: Timer ticks every second.
-Handler: Updates elapsed time and game statistics label. 
-4. Game Status Label (refreshGameStatLabel)
-Event: Game state updates.
-Handler: Updates the game statistics (steps, time, player name). 
-5. Game Level Reset (game.getLevel().reset())
-Event: Game is restarted.
-Handler: Resets the game state and player position. 
-6. Level Loading (game.loadGame(game.getGameID()))
-Event: User selects a new level.
-Handler: Loads the selected level and refreshes the game board.
+## 2. Menu Actions
+
+### 2.1 Restart Game (menuGameRestart)
+- **Event**: User clicks "Restart Game".
+- **Handler**: Calls `restartGame()`, resets game and timer.
+
+### 2.2 Exit Game (menuGameExit)
+- **Event**: User clicks "Exit".
+- **Handler**: Calls `System.exit(0)` to exit the app.
+
+### 2.3 High Scores (menuHighScore)
+- **Event**: User clicks "High Scores".
+- **Handler**: Displays high scores in a dialog (`displayHighScores()`).
+
+### 2.4 Level Selection
+- **Event**: User selects a difficulty/level.
+- **Handler**: Calls `game.loadGame()` to load the selected level.
+
+### 2.5 Zoom Scale Selection
+- **Event**: User selects zoom level.
+- **Handler**: Updates board scale (`board.setScale()`).
+
+## 3. Timer Actions
+
+### 3.1 Start Timer (startTimer)
+- **Event**: Game starts or restarts.
+- **Handler**: Starts a timer to track elapsed time.
+
+### 3.2 Stop Timer (stopTimer)
+- **Event**: Game ends.
+- **Handler**: Stops the timer and resets elapsed time.
+
+### 3.3 Timer Action Listener
+- **Event**: Timer ticks every second.
+- **Handler**: Updates elapsed time and game statistics label.
+
+## 4. Game Status Label (refreshGameStatLabel)
+- **Event**: Game state updates.
+- **Handler**: Updates the game statistics (steps, time, player name).
+
+## 5. Game Level Reset (game.getLevel().reset())
+- **Event**: Game is restarted.
+- **Handler**: Resets the game state and player position.
+
+## 6. Level Loading (game.loadGame(game.getGameID()))
+- **Event**: User selects a new level.
+- **Handler**: Loads the selected level and refreshes the game board.
 
 # Game
 When I runs the program it asks for a player’s name
