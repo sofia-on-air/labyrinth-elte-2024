@@ -113,6 +113,7 @@ When I runs the program it asks for a player’s name
 ![inputOfName](images/name_inp.png)
 
 First level starts
+
 ![firstLevel](images/game_begin.png)
 
 In case of winning dialog of congrads shows up
@@ -131,69 +132,79 @@ That’s how highScores looks like
 
 ![bestPlayers](images/playersB.png)
 
-# TESTS:
-AS A PLAYER, I WANT to see the labyrinth generated with walls and escape paths
-• GIVEN a new game starts
-• WHEN the labyrinth is generated
-• THEN walls should be placed randomly and there should be a valid path from the
-bottom left to the top right.
-AS A PLAYER, I WANT to see the dragon's starting position
-• GIVEN the dragon starts from a random position
-• WHEN the game begins
-• THEN the dragon's initial position should be displayed as randomly placed in a non-
-wall cell.
-AS A PLAYER, I WANT the player to move left
-• GIVEN the player is at position (2,2 )
-• WHEN the player moves left
-• THEN the player’s position should update to (2, 1) if no wall exists
-AS A PLAYER, I WANT the player to move right
-• GIVEN the player is at position (1, 1)
-• WHEN the player moves right
-• THEN the player’s position should update to (1, 2) if no wall exists. AS A PLAYER, I WANT the player to move up
-• GIVEN the player is at position (3, 1)
-• WHEN the player moves up
-• THEN the player’s position should update to (2, 1) if no wall exists.
-AS A PLAYER, I WANT the player to move down
-• GIVEN the player is at position (1, 2)
-• WHEN the player moves down
-• THEN the player’s position should update to (2, 2) if no wall exists.
-AS A PLAYER, I WANT to see a message if the dragon catches the player
-• GIVEN the dragon is adjacent to the player
-• WHEN the dragon moves next to the player
-• THEN a "Ups, you lost!” message should appear.
-AS A PLAYER, I WANT the dragon to avoid walls
-• GIVEN the dragon is at a random position
-• WHEN the dragon encounters a wall
-• THEN the dragon should choose another direction that doesn’t collide with a wall.
-AS A PLAYER, I WANT to track the time taken to escape
-• GIVEN the player successfully escapes
-• WHEN the player reaches the top right corner
-• THEN the time taken to escape should be displayed.
-AS A PLAYER, I WANT to see a “Congratulations!” message when escaping the labyrinth
-• GIVEN the player reaches the top right corner
-• WHEN the player reaches the goal
-• THEN a "You Win!" message should appear.
-AS A PLAYER, I WANT to see a highscore table showing the best scores
-• GIVEN the player completes the game
-• WHEN the player selects the "High Scores" option
-• THEN the top 10 scores should be displayed with player names and scores.
-AS A PLAYER, I WANT to restart the game from the beginning
-• GIVEN the player has completed or lost the game
-• WHEN the player selects the "Restart Game" option
-• THEN the game should restart with a new labyrinth, resetting player and dragon
-positions.
+# TESTS
 
-AS A PLAYER, I WANT the dragon’s movement to be unpredictable
-• GIVEN the dragon is moving
-• WHEN the dragon picks a random direction
-• THEN the movement should be unpredictable.
-AS A PLAYER, I WANT to see the neighboring cells within a radius of 3 units
-• GIVEN the player is at a random position
-• WHEN the game shows the player’s surroundings
-• THEN the neighboring cells (within a radius of 3) should be visible to the player.
-AS A PLAYER, I WANT to see if the dragon moves closer to the player
-• GIVEN the player moves in the labyrinth
-• WHEN the player and dragon move
-• THEN the dragon’s position should be updated on the map if it moves closer.
+## AS A PLAYER, I WANT to see the labyrinth generated with walls and escape paths
+- **GIVEN**: A new game starts  
+- **WHEN**: The labyrinth is generated  
+- **THEN**: Walls should be placed randomly, and there should be a valid path from the bottom left to the top right.  
 
+## AS A PLAYER, I WANT to see the dragon's starting position
+- **GIVEN**: The dragon starts from a random position  
+- **WHEN**: The game begins  
+- **THEN**: The dragon's initial position should be displayed as randomly placed in a non-wall cell.  
 
+## AS A PLAYER, I WANT the player to move left
+- **GIVEN**: The player is at position (2,2)  
+- **WHEN**: The player moves left  
+- **THEN**: The player’s position should update to (2,1) if no wall exists.  
+
+## AS A PLAYER, I WANT the player to move right
+- **GIVEN**: The player is at position (1,1)  
+- **WHEN**: The player moves right  
+- **THEN**: The player’s position should update to (1,2) if no wall exists.  
+
+## AS A PLAYER, I WANT the player to move up
+- **GIVEN**: The player is at position (3,1)  
+- **WHEN**: The player moves up  
+- **THEN**: The player’s position should update to (2,1) if no wall exists.  
+
+## AS A PLAYER, I WANT the player to move down
+- **GIVEN**: The player is at position (1,2)  
+- **WHEN**: The player moves down  
+- **THEN**: The player’s position should update to (2,2) if no wall exists.  
+
+## AS A PLAYER, I WANT to see a message if the dragon catches the player
+- **GIVEN**: The dragon is adjacent to the player  
+- **WHEN**: The dragon moves next to the player  
+- **THEN**: An "Oops, you lost!" message should appear.  
+
+## AS A PLAYER, I WANT the dragon to avoid walls
+- **GIVEN**: The dragon is at a random position  
+- **WHEN**: The dragon encounters a wall  
+- **THEN**: The dragon should choose another direction that doesn’t collide with a wall.  
+
+## AS A PLAYER, I WANT to track the time taken to escape
+- **GIVEN**: The player successfully escapes  
+- **WHEN**: The player reaches the top right corner  
+- **THEN**: The time taken to escape should be displayed.  
+
+## AS A PLAYER, I WANT to see a “Congratulations!” message when escaping the labyrinth
+- **GIVEN**: The player reaches the top right corner  
+- **WHEN**: The player reaches the goal  
+- **THEN**: A "You Win!" message should appear.  
+
+## AS A PLAYER, I WANT to see a highscore table showing the best scores
+- **GIVEN**: The player completes the game  
+- **WHEN**: The player selects the "High Scores" option  
+- **THEN**: The top 10 scores should be displayed with player names and scores.  
+
+## AS A PLAYER, I WANT to restart the game from the beginning
+- **GIVEN**: The player has completed or lost the game  
+- **WHEN**: The player selects the "Restart Game" option  
+- **THEN**: The game should restart with a new labyrinth, resetting player and dragon positions.  
+
+## AS A PLAYER, I WANT the dragon’s movement to be unpredictable
+- **GIVEN**: The dragon is moving  
+- **WHEN**: The dragon picks a random direction  
+- **THEN**: The movement should be unpredictable.  
+
+## AS A PLAYER, I WANT to see the neighboring cells within a radius of 3 units
+- **GIVEN**: The player is at a random position  
+- **WHEN**: The game shows the player’s surroundings  
+- **THEN**: The neighboring cells (within a radius of 3) should be visible to the player.  
+
+## AS A PLAYER, I WANT to see if the dragon moves closer to the player
+- **GIVEN**: The player moves in the labyrinth  
+- **WHEN**: The player and dragon move  
+- **THEN**: The dragon’s position should be updated on the map if it moves closer.  
